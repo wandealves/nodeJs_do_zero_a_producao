@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API NodeJs",
+  "main": "index.js",
+  "repository": "https://github.com/wandealves/nodeJs_do_zero_a_producao",
+  "author": "Wanderson",
+  "license": "MIT"
+}
