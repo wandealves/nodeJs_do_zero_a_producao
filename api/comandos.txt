@@ -1,0 +1,12 @@
+1) Adicionar typescript
+
+yarn add typescript -D
+
+2) Adicionar os types para Node
+
+yarn add -D @types/node
+
+3) Pacote para alias de pastas
+
+yarn add module-alias
+yarn add -D @types/module-alias
