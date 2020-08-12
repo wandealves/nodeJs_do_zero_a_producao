@@ -27,7 +27,11 @@
                   "./test"
             ],
             "experimentalDecorators": true,
-            "emitDecoratorMetadata": true
+            "emitDecoratorMetadata": true,
+            "types": [
+                  "mocha",
+                  "jest"
+            ]
       },
       "include": [
             "./src/**/*.ts",

@@ -18,3 +18,13 @@ yarn add -D @typescript-eslint/eslint-plugin eslint @typescript-eslint/parser
 5) Executar e compilar em mode dev
 
 yarn add -D ts-node-dev
+
+6) jest para test
+
+yarn add -D jest ts-jest @types/jest
+
+yarn add -D @types/mocha
+
+7) Super teste para mode de dev
+
+yarn add -D supertest @types/supertest
