@@ -28,3 +28,10 @@ yarn add -D @types/mocha
 7) Super teste para mode de dev
 
 yarn add -D supertest @types/supertest
+
+8) Adicionar express e overnight para anotações
+
+yarn add express body-parser @overnightjs/core
+yarn add -D @types/express
+
+
