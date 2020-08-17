@@ -38,5 +38,10 @@ yarn add -D @types/express
 
 yarn add -D prettier
 
+10) Requisição http
+
+yarn add axios
+yarn add -D @types/axios
+
 
 
