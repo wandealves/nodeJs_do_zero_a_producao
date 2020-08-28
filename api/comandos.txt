@@ -47,3 +47,8 @@ yarn add -D @types/axios
 
 yarn add config
 yarn add -D @types/config
+
+12) instalar MongoDB
+
+yarn add mongoose
+yarn add -D @types/mongoose
