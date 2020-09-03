@@ -1,7 +1,7 @@
 import config, { IConfig } from 'config';
 
-import * as HTTPUtil from '@src/util/request';
-import { InternalError } from '@src/util/errors/internal-error';
+import * as HTTPUtil from '../util/request';
+import { InternalError } from '../util/errors/internal-error';
 
 export interface StormGlassPointSource {
   [key: string]: number;
