@@ -56,3 +56,8 @@ yarn add -D @types/mongoose
 13) Adicionar nock
 
 yarn add -D nock @types/nock
+
+14) Criptografar
+
+yarn add bcrypt
+yarn add -D @types/bcrypt
