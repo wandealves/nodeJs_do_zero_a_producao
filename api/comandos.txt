@@ -61,3 +61,8 @@ yarn add -D nock @types/nock
 
 yarn add bcrypt
 yarn add -D @types/bcrypt
+
+15) Token
+
+yarn add jsonwebtoken
+yarn add -D @types/jsonwebtoken
