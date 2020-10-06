@@ -1,7 +1,20 @@
 import { Beach } from '@src/models/beache';
+import { User } from '@src/models/user';
+import AuthService from '@src/services/auth';
 
 describe('Beaches functional testes', () => {
-  beforeAll(async () => await Beach.deleteMany({}));
+  const defaultUser = {
+    name: 'John Doe',
+    email: 'john2@mail.com',
+    password: '1234',
+  };
+  let token: string;
+  beforeEach(async () => {
+    await Beach.deleteMany({});
+    await User.deleteMany({});
+    const user = await new User(defaultUser).save();
+    token = AuthService.generateToken(user.toJSON());
+  });
   describe('Whwn craeting a beach', () => {
     it('should create a beach witch with sucess', async () => {
       const newBeach = {
@@ -11,7 +24,10 @@ describe('Beaches functional testes', () => {
         position: 'E',
       };
 
-      const response = await global.testRequest.post('/beaches').send(newBeach);
+      const response = await global.testRequest
+        .post('/beaches')
+        .set({ 'x-access-token': token })
+        .send(newBeach);
       expect(response.status).toBe(201);
       expect(response.body).toEqual(expect.objectContaining(newBeach));
     });
@@ -26,6 +42,7 @@ describe('Beaches functional testes', () => {
 
       const response = await await global.testRequest
         .post('/beaches')
+        .set({ 'x-access-token': token })
         .send(newBeach);
       expect(response.status).toBe(422);
       expect(response.body).toEqual({

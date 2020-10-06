@@ -1,26 +1,26 @@
-import { Controller, Get } from '@overnightjs/core';
+import { ClassMiddleware, Controller, Get } from '@overnightjs/core';
 import { Request, Response } from 'express';
 
 import { Beach } from '../models/beache';
 import { Forecast } from '../services/forecast';
+import { authMiddleware } from '@src/middlewares/auth';
 
 const forecast = new Forecast();
 
 @Controller('forecast')
+@ClassMiddleware(authMiddleware)
 export default class ForecastController {
   @Get('')
   public async getForecastLoggedUser(
-    _: Request,
-    response: Response
+    req: Request,
+    res: Response
   ): Promise<void> {
     try {
-      const beaches = await Beach.find({});
-
+      const beaches = await Beach.find({ user: req.decoded?.id });
       const forecastData = await forecast.processForecastForBeaches(beaches);
-
-      response.status(200).send(forecastData);
+      res.status(200).send(forecastData);
     } catch (error) {
-      response.status(500).send({ error: 'Something went wrong' });
+      res.status(500).send({ error: 'Something went wrong' });
     }
   }
 }
