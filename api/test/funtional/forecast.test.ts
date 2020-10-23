@@ -1,9 +1,9 @@
-import { Beach, BeachPosition } from '@src/models/beache';
+import { Beach, BeachPosition } from '../models/beache';
 import nock from 'nock';
 import stormGlassWeather3HoursFixture from '../fixtures/stormglass_weather_3_hours.json';
 import apiForecastResponse1BeachFixture from '../fixtures/api_forecast_response_1_beach.json';
-import { User } from '@src/models/user';
-import AuthService from '@src/services/auth';
+import { User } from '../models/user';
+import AuthService from '../services/auth';
 
 describe('Beach forecast functional tests', () => {
   const defaultUser: User = {

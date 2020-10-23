@@ -1,6 +1,6 @@
-import { Beach } from '@src/models/beache';
-import { User } from '@src/models/user';
-import AuthService from '@src/services/auth';
+import { Beach } from '../models/beache';
+import { User } from '../models/user';
+import AuthService from '../services/auth';
 
 describe('Beaches functional testes', () => {
   const defaultUser = {

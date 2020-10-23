@@ -1,5 +1,5 @@
-import { User } from '@src/models/user';
-import AuthService from '@src/services/auth';
+import { User } from '../models/user';
+import AuthService from '../services/auth';
 
 describe('Users functional tests', () => {
   beforeEach(async () => {

@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 
 import { Beach } from '../models/beache';
 import { Forecast } from '../services/forecast';
-import { authMiddleware } from '@src/middlewares/auth';
+import { authMiddleware } from '../middlewares/auth';
 
 const forecast = new Forecast();
 

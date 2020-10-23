@@ -66,3 +66,9 @@ yarn add -D @types/bcrypt
 
 yarn add jsonwebtoken
 yarn add -D @types/jsonwebtoken
+
+16) Logs
+
+yarn add pino
+yarn add -D @types/pino
+yarn add -D pino-pretty

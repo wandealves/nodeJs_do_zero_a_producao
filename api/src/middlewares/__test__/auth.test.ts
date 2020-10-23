@@ -1,4 +1,4 @@
-import AuthService from '@src/services/auth';
+import AuthService from '../../services/auth';
 import { authMiddleware } from '../auth';
 
 describe('AuthMiddleware', () => {
